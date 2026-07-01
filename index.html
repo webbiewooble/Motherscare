@@ -91,7 +91,7 @@
                 <!-- Desktop Nav -->
                 <nav class="hidden lg:flex items-center gap-8">
                     <a href="#home" class="text-sm font-medium text-muted hover:text-teal transition-colors">Home</a>
-                    <a href="#about" class="text-sm font-medium text-muted hover:text-teal transition-colors">About Trust</a>
+                    <a href="#about" class="text-sm font-medium text-muted hover:text-teal transition-colors">About SQA</a>
                     <a href="#mission" class="text-sm font-medium text-muted hover:text-teal transition-colors">Our Mission</a>
                     <a href="#project" class="text-sm font-medium text-muted hover:text-teal transition-colors">Hospital Project</a>
                     <a href="#services" class="text-sm font-medium text-muted hover:text-teal transition-colors">Services</a>
@@ -115,7 +115,7 @@
         <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-gray-100 absolute w-full left-0 top-full shadow-sm">
             <nav class="flex flex-col px-6 py-6 gap-5">
                 <a href="#home" class="mobile-link text-base font-medium text-navy">Home</a>
-                <a href="#about" class="mobile-link text-base font-medium text-navy">About Trust</a>
+                <a href="#about" class="mobile-link text-base font-medium text-navy">About SQA</a>
                 <a href="#mission" class="mobile-link text-base font-medium text-navy">Our Mission</a>
                 <a href="#project" class="mobile-link text-base font-medium text-navy">Hospital Project</a>
                 <a href="#services" class="mobile-link text-base font-medium text-navy">Services</a>
@@ -127,7 +127,9 @@
     </header>
 
     <main class="flex-grow pt-20">
-        <!-- 1. Hero Section -->
+        <!-- Home View -->
+        <div id="home-view" class="space-y-0">
+            <!-- 1. Hero Section -->
         <section id="home" class="py-16 md:py-24 lg:py-32 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto fade-in-up">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
                 <div class="max-w-2xl">
@@ -169,46 +171,99 @@
 
         <!-- 3. Why This Hospital? -->
         <section id="why-us" class="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto fade-in-up">
-            <div class="mb-16 max-w-2xl">
+            <div class="mb-16 max-w-4xl">
                 <h2 class="text-3xl font-medium text-navy tracking-tight">Why This Hospital?</h2>
-                <p class="text-muted mt-4 font-light text-lg">A sanctuary of healing designed entirely around the needs and privacy of women.</p>
+                <p class="text-muted mt-4 font-normal text-xl sm:text-2xl leading-relaxed text-navy">Because Every Woman Deserves Healthcare with Dignity, Privacy, and Respect.</p>
             </div>
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-                <div class="flex flex-col gap-4 p-6 bg-lightgray rounded-2xl hover-lift">
-                    <div class="w-10 h-10 text-teal flex items-center">
-                        <i data-lucide="stethoscope" class="w-6 h-6"></i>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+                <!-- Left: Professional Narrative Copy -->
+                <div class="lg:col-span-7 space-y-8 text-muted font-light leading-relaxed text-base sm:text-lg">
+                    <p class="text-navy font-normal text-xl leading-relaxed">
+                        Mother Care Women &amp; Child Hospital was born from a simple belief: no woman should ever hesitate to seek medical care because she feels uncomfortable, unheard, or lacks privacy.
+                    </p>
+                    
+                    <p>
+                        Many women find it difficult to openly discuss personal health concerns or undergo medical examinations. We believe healthcare is not only about treatment—it is about trust, comfort, confidentiality, and respect.
+                    </p>
+                    
+                    <p>
+                        That is why we are building a women-centered hospital where, wherever practical and appropriate, women receive care from qualified female healthcare professionals in an environment designed around their privacy, dignity, and well-being.
+                    </p>
+
+                    <div class="p-8 bg-lavender rounded-3xl border-l-4 border-teal my-6">
+                        <span class="text-teal font-medium text-sm tracking-wider uppercase block mb-1">Our Core Commitment</span>
+                        <blockquote class="text-navy font-medium text-xl leading-snug">
+                            "Our mission is not driven by profit or recognition. It is driven by service."
+                        </blockquote>
                     </div>
-                    <span class="font-medium text-navy text-sm">Female Doctors</span>
+
+                    <p>
+                        We are committed to providing high-quality healthcare at affordable and transparent prices without compromising medical standards or patient care.
+                    </p>
+
+                    <p>
+                        If you ever question our intentions, we invite you to visit us. Meet our team, see our facilities, compare our services, and judge us by our actions—not our words. We believe trust is earned through honesty, compassion, and consistent care.
+                    </p>
+
+                    <div class="p-8 bg-softpink rounded-3xl text-navy space-y-4">
+                        <p class="font-normal text-lg leading-relaxed">
+                            Every woman who walks through our doors is someone's mother, daughter, sister, wife, or friend—and above all, she is a human being who deserves to be treated with dignity.
+                        </p>
+                        <p class="text-teal font-medium">
+                            That is the hospital we are building. A place where healing begins with trust, privacy, compassion, and respect.
+                        </p>
+                    </div>
                 </div>
-                <div class="flex flex-col gap-4 p-6 bg-lightgray rounded-2xl hover-lift">
-                    <div class="w-10 h-10 text-teal flex items-center">
-                        <i data-lucide="cross" class="w-6 h-6"></i>
+
+                <!-- Right: Core Pillars / 6 Icons Grid -->
+                <div class="lg:col-span-5 space-y-6">
+                    <h3 class="text-navy font-semibold text-xs tracking-wider uppercase mb-4">Core Foundations</h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="flex items-center gap-4 p-5 bg-lightgray rounded-2xl hover-lift">
+                            <div class="w-10 h-10 text-teal flex items-center justify-center bg-white rounded-xl shadow-sm">
+                                <i data-lucide="stethoscope" class="w-5 h-5"></i>
+                            </div>
+                            <span class="font-medium text-navy text-sm">Female Doctors</span>
+                        </div>
+                        <div class="flex items-center gap-4 p-5 bg-lightgray rounded-2xl hover-lift">
+                            <div class="w-10 h-10 text-teal flex items-center justify-center bg-white rounded-xl shadow-sm">
+                                <i data-lucide="users" class="w-5 h-5"></i>
+                            </div>
+                            <span class="font-medium text-navy text-sm">Female Nurses</span>
+                        </div>
+                        <div class="flex items-center gap-4 p-5 bg-lightgray rounded-2xl hover-lift">
+                            <div class="w-10 h-10 text-teal flex items-center justify-center bg-white rounded-xl shadow-sm">
+                                <i data-lucide="building-2" class="w-5 h-5"></i>
+                            </div>
+                            <span class="font-medium text-navy text-sm">Women-only Facility</span>
+                        </div>
+                        <div class="flex items-center gap-4 p-5 bg-lightgray rounded-2xl hover-lift">
+                            <div class="w-10 h-10 text-teal flex items-center justify-center bg-white rounded-xl shadow-sm">
+                                <i data-lucide="lock" class="w-5 h-5"></i>
+                            </div>
+                            <span class="font-medium text-navy text-sm">Privacy</span>
+                        </div>
+                        <div class="flex items-center gap-4 p-5 bg-lightgray rounded-2xl hover-lift">
+                            <div class="w-10 h-10 text-teal flex items-center justify-center bg-white rounded-xl shadow-sm">
+                                <i data-lucide="heart" class="w-5 h-5"></i>
+                            </div>
+                            <span class="font-medium text-navy text-sm">Compassion</span>
+                        </div>
+                        <div class="flex items-center gap-4 p-5 bg-lightgray rounded-2xl hover-lift">
+                            <div class="w-10 h-10 text-teal flex items-center justify-center bg-white rounded-xl shadow-sm">
+                                <i data-lucide="flower-2" class="w-5 h-5"></i>
+                            </div>
+                            <span class="font-medium text-navy text-sm">Dignity</span>
+                        </div>
                     </div>
-                    <span class="font-medium text-navy text-sm">Female Nurses</span>
-                </div>
-                <div class="flex flex-col gap-4 p-6 bg-lightgray rounded-2xl hover-lift">
-                    <div class="w-10 h-10 text-teal flex items-center">
-                        <i data-lucide="building-2" class="w-6 h-6"></i>
+                    
+                    <div class="p-6 border border-gray-100 rounded-2xl bg-white space-y-3 shadow-sm">
+                        <h4 class="font-medium text-navy">Transparency Matters</h4>
+                        <p class="text-xs text-muted font-light leading-relaxed">
+                            All registration numbers, trust records, financial reports, and hospital audit profiles are updated yearly under SQA Social Welfare Trust to maintain total public confidence.
+                        </p>
                     </div>
-                    <span class="font-medium text-navy text-sm">Women-only Facility</span>
-                </div>
-                <div class="flex flex-col gap-4 p-6 bg-lightgray rounded-2xl hover-lift">
-                    <div class="w-10 h-10 text-teal flex items-center">
-                        <i data-lucide="lock" class="w-6 h-6"></i>
-                    </div>
-                    <span class="font-medium text-navy text-sm">Privacy</span>
-                </div>
-                <div class="flex flex-col gap-4 p-6 bg-lightgray rounded-2xl hover-lift">
-                    <div class="w-10 h-10 text-teal flex items-center">
-                        <i data-lucide="heart" class="w-6 h-6"></i>
-                    </div>
-                    <span class="font-medium text-navy text-sm">Compassion</span>
-                </div>
-                <div class="flex flex-col gap-4 p-6 bg-lightgray rounded-2xl hover-lift">
-                    <div class="w-10 h-10 text-teal flex items-center">
-                        <i data-lucide="flower-2" class="w-6 h-6"></i>
-                    </div>
-                    <span class="font-medium text-navy text-sm">Dignity</span>
                 </div>
             </div>
         </section>
@@ -391,6 +446,243 @@
                 </div>
             </div>
         </section>
+        </div>
+
+        <!-- About Trust View -->
+        <div id="about-view" class="hidden">
+            <!-- Section Header -->
+            <div class="bg-lavender py-12 border-b border-gray-100">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <nav class="flex mb-4 text-sm text-muted" aria-label="Breadcrumb">
+                        <a href="#home" class="hover:text-teal transition-colors flex items-center gap-1">
+                            <i data-lucide="arrow-left" class="w-4 h-4 text-teal"></i> Back to Homepage
+                        </a>
+                    </nav>
+                    <h1 class="text-3xl md:text-5xl font-medium text-navy tracking-tight">About SQA Social Welfare Trust</h1>
+                    <p class="text-teal mt-2 font-medium">Building meaningful and lasting social impact across India.</p>
+                </div>
+            </div>
+
+            <!-- Content -->
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+                <div class="prose prose-slate max-w-none font-light leading-relaxed text-muted text-lg space-y-8">
+                    <p class="text-navy font-normal text-xl leading-relaxed mb-6">
+                        SQA Social Welfare Trust is a charitable organization founded with a long-term vision of creating meaningful and lasting social impact across India.
+                    </p>
+                    <p>
+                        Established on the principles of compassion, integrity, equality, and selfless service, the Trust is committed to improving the quality of life for individuals and families through initiatives in healthcare, education, skill development, employment support, and community welfare.
+                    </p>
+                    
+                    <div class="p-8 bg-softpink rounded-2xl border-l-4 border-teal my-8">
+                        <h3 class="font-medium text-navy text-xl mb-3 font-semibold">Our Journey Begins with Healthcare</h3>
+                        <p class="text-base text-navy/90 leading-relaxed font-light">
+                            We believe that a healthy woman is the foundation of a healthy family, and a healthy family is the foundation of a strong nation.
+                            Guided by this belief, our flagship initiative is <strong>Mother Care &amp; Women's Hospital</strong>—a women-centered healthcare institution dedicated to providing compassionate, affordable, and high-quality medical care in an environment that prioritizes dignity, privacy, respect, and trust.
+                        </p>
+                    </div>
+
+                    <h3 class="text-navy font-medium text-2xl mt-10 mb-4 font-semibold">Beyond Healthcare</h3>
+                    <p>
+                        However, our vision extends far beyond building a hospital. We aspire to create opportunities that empower individuals, support underprivileged families, encourage education, promote skills and employment, and strengthen communities. Every project undertaken by the Trust is designed to create sustainable change and improve the lives of future generations.
+                    </p>
+                    
+                    <p>
+                        At SQA Social Welfare Trust, we proudly serve every individual without discrimination based on religion, caste, community, language, gender, or economic background. We believe humanity is our greatest identity, and service to society is our highest responsibility.
+                    </p>
+
+                    <div class="bg-navy text-white rounded-3xl p-8 text-center mt-12 shadow-lg">
+                        <h4 class="font-semibold text-xl md:text-2xl mb-4 text-softpink">Driven by Purpose</h4>
+                        <p class="text-gray-300 font-light max-w-2xl mx-auto leading-relaxed">
+                            We are not driven by profit or recognition. We are driven by purpose—the purpose of building institutions that inspire trust, deliver meaningful impact, and stand as symbols of hope for generations to come. Through transparency, accountability, and unwavering dedication, we invite compassionate citizens, professionals, volunteers, and supporters to join us in building a healthier, more educated, and more empowered India—one family, one community, and one life at a time.
+                        </p>
+                        <a href="#volunteer" class="inline-flex items-center gap-2 px-8 py-3.5 bg-teal text-white rounded-full font-medium mt-8 hover:bg-opacity-90 transition-colors hover-lift">
+                            Join Our Mission
+                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Join Our Mission / Volunteer View -->
+        <div id="volunteer-view" class="hidden">
+            <!-- Section Header -->
+            <div class="bg-lavender py-12 border-b border-gray-100">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <nav class="flex mb-4 text-sm text-muted" aria-label="Breadcrumb">
+                        <a href="#home" class="hover:text-teal transition-colors flex items-center gap-1">
+                            <i data-lucide="arrow-left" class="w-4 h-4 text-teal"></i> Back to Homepage
+                        </a>
+                    </nav>
+                    <h1 class="text-3xl md:text-5xl font-medium text-navy tracking-tight">Join Our Mission</h1>
+                    <p class="text-teal mt-2 font-medium">The future is not something we inherit—it is something we build together.</p>
+                </div>
+            </div>
+
+            <!-- Content Grid -->
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                    <!-- Left Side: Inspirational Copy -->
+                    <div class="lg:col-span-7 space-y-8">
+                        <div class="prose prose-slate max-w-none font-light leading-relaxed text-muted text-lg">
+                            <p class="text-navy font-normal text-xl leading-relaxed mb-6">
+                                SQA Social Welfare Trust was founded with a vision that extends far beyond a single project.
+                            </p>
+                            <p class="mb-6">
+                                Mother Care &amp; Women's Hospital is the first step in our journey, but it is only the
+                                beginning. As our Trust grows, we aspire to expand our work into education, skill
+                                development, employment support, technology, community healthcare, and social welfare
+                                initiatives that create lasting opportunities for future generations.
+                            </p>
+                            <p class="mb-6">
+                                Our communities have immense talent, determination, and potential. Yet many families
+                                continue to face challenges in accessing quality healthcare, education, employment
+                                opportunities, and modern resources. We believe these challenges can be overcome—not
+                                by waiting for change, but by becoming part of it.
+                            </p>
+                            
+                            <div class="p-8 bg-softpink rounded-2xl border-l-4 border-teal my-8">
+                                <h3 class="font-medium text-navy text-xl mb-3 font-semibold">This is the time to act.</h3>
+                                <p class="text-base text-navy/90 leading-relaxed font-light">
+                                    The world is advancing rapidly. New technologies, industries, and opportunities are shaping
+                                    the future every day. If we invest in our people today, especially in women and children, we
+                                    can build stronger families, stronger communities, and a stronger India tomorrow.
+                                </p>
+                            </div>
+
+                            <h3 class="text-navy font-medium text-2xl mt-10 mb-4 font-semibold">We cannot achieve this vision alone.</h3>
+                            <p class="mb-6">
+                                We invite doctors, nurses, educators, engineers, architects, entrepreneurs, legal
+                                professionals, students, volunteers, philanthropists, corporate partners, and every
+                                compassionate citizen to join this mission. Whether you contribute your knowledge,
+                                experience, time, professional skills, ideas, or financial support, your participation can help
+                                create institutions that will serve society for generations.
+                            </p>
+
+                            <div class="p-8 bg-lightgray rounded-2xl border border-gray-100 my-8 space-y-4">
+                                <h4 class="font-semibold text-navy text-lg flex items-center gap-2">
+                                    <i data-lucide="shield-check" class="text-teal w-5 h-5"></i>
+                                    Our Promise to You
+                                </h4>
+                                <p class="text-base font-light">
+                                    We promise to work with honesty, transparency, accountability, and without discrimination
+                                    based on religion, caste, community, language, gender, or economic background. Every
+                                    contribution entrusted to us will be respected, and every supporter will become a valued
+                                    partner in our journey.
+                                </p>
+                            </div>
+
+                            <p class="text-navy font-normal text-xl leading-relaxed mt-10 mb-6">
+                                If you believe that every woman deserves dignified healthcare, every child deserves a
+                                brighter future, and every family deserves the opportunity to live with hope and dignity, then
+                                we warmly invite you to walk beside us.
+                            </p>
+
+                            <!-- Closing Banner -->
+                            <div class="bg-navy text-white rounded-3xl p-8 text-center mt-12 shadow-lg">
+                                <h4 class="font-semibold text-xl md:text-2xl mb-2 text-softpink">Do not wait for someone else to build the future.</h4>
+                                <p class="text-teal font-medium mb-4">Become part of the generation that chose to create it.</p>
+                                <p class="text-sm text-gray-300 font-light max-w-xl mx-auto">
+                                    Together, let us build institutions that inspire trust, create opportunities, and leave a
+                                    legacy of compassion for generations to come.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Side: Interactive Contribution Form -->
+                    <div class="lg:col-span-5">
+                        <div class="bg-white rounded-3xl p-8 border border-gray-100 shadow-sm sticky top-28">
+                            <div id="form-container">
+                                <h3 class="text-2xl font-medium text-navy tracking-tight mb-2">Become a Partner</h3>
+                                <p class="text-sm text-muted font-light mb-8">Share your interests, skills, or professional experience to begin your journey with us.</p>
+                                
+                                <form id="volunteer-form" class="space-y-6">
+                                    <div>
+                                        <label class="block text-sm font-medium text-navy mb-2" for="v-name">Full Name</label>
+                                        <input type="text" id="v-name" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:border-teal text-sm" placeholder="Enter your name">
+                                    </div>
+                                    
+                                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                        <div>
+                                            <label class="block text-sm font-medium text-navy mb-2" for="v-email">Email Address</label>
+                                            <input type="email" id="v-email" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:border-teal text-sm" placeholder="you@example.com">
+                                        </div>
+                                        <div>
+                                            <label class="block text-sm font-medium text-navy mb-2" for="v-phone">Phone Number</label>
+                                            <input type="tel" id="v-phone" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:border-teal text-sm" placeholder="+91 98765 43210">
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <label class="block text-sm font-medium text-navy mb-2" for="v-role">Your Professional Role / Profile</label>
+                                        <select id="v-role" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:border-teal text-sm bg-white">
+                                            <option value="">Select your role</option>
+                                            <option value="doctor">Medical Doctor</option>
+                                            <option value="nurse">Nurse / Healthcare Staff</option>
+                                            <option value="educator">Educator / Teacher</option>
+                                            <option value="engineer">Engineer / Architect</option>
+                                            <option value="legal">Legal Professional</option>
+                                            <option value="student">Student / Youth Volunteer</option>
+                                            <option value="entrepreneur">Entrepreneur / Advisor</option>
+                                            <option value="corporate">Corporate CSR Partner</option>
+                                            <option value="philanthropist">Philanthropist</option>
+                                            <option value="other">Other Compassionate Citizen</option>
+                                        </select>
+                                    </div>
+
+                                    <div>
+                                        <label class="block text-sm font-medium text-navy mb-2">How would you like to contribute?</label>
+                                        <div class="space-y-2 mt-2">
+                                            <label class="flex items-center gap-3 text-sm text-muted font-light cursor-pointer">
+                                                <input type="checkbox" name="contribution" value="time" class="rounded text-teal focus:ring-teal w-4 h-4">
+                                                <span>Volunteer my time &amp; energy</span>
+                                            </label>
+                                            <label class="flex items-center gap-3 text-sm text-muted font-light cursor-pointer">
+                                                <input type="checkbox" name="contribution" value="professional" class="rounded text-teal focus:ring-teal w-4 h-4">
+                                                <span>Offer my professional skills/services</span>
+                                            </label>
+                                            <label class="flex items-center gap-3 text-sm text-muted font-light cursor-pointer">
+                                                <input type="checkbox" name="contribution" value="financial" class="rounded text-teal focus:ring-teal w-4 h-4">
+                                                <span>Provide financial/material support</span>
+                                            </label>
+                                            <label class="flex items-center gap-3 text-sm text-muted font-light cursor-pointer">
+                                                <input type="checkbox" name="contribution" value="ideas" class="rounded text-teal focus:ring-teal w-4 h-4">
+                                                <span>Collaborate with ideas &amp; networking</span>
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <label class="block text-sm font-medium text-navy mb-2" for="v-message">Tell us a bit about yourself &amp; your ideas</label>
+                                        <textarea id="v-message" rows="4" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:border-teal text-sm" placeholder="How would you like to build the future with SQA Trust?"></textarea>
+                                    </div>
+
+                                    <button type="submit" class="w-full py-4 bg-teal text-white rounded-full font-medium hover:bg-opacity-90 transition-all hover-lift flex items-center justify-center gap-2">
+                                        Submit Application
+                                        <i data-lucide="send" class="w-4 h-4"></i>
+                                    </button>
+                                </form>
+                            </div>
+
+                            <!-- Success State -->
+                            <div id="volunteer-success" class="hidden text-center py-8 space-y-4 animate-fade-in">
+                                <div class="w-16 h-16 bg-teal/10 text-teal rounded-full flex items-center justify-center mx-auto">
+                                    <i data-lucide="party-popper" class="w-8 h-8"></i>
+                                </div>
+                                <h4 class="text-xl font-medium text-navy">Welcome to SQA Trust!</h4>
+                                <p class="text-sm text-muted font-light max-w-sm mx-auto">
+                                    Thank you for taking the first step. Our team will review your details and reach out to you within 48 hours to discuss how we can walk this path together.
+                                </p>
+                                <button id="v-reset-btn" class="text-sm text-teal font-medium hover:underline mt-4">
+                                    Submit another form
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
 
     <!-- 10. Footer -->
@@ -478,6 +770,78 @@
                 menu.classList.add('hidden');
             });
         });
+
+        // Lightweight routing function to handle home sections vs dedicated "Join Our Mission" page
+        function handleRouting() {
+            const hash = window.location.hash;
+            const homeView = document.getElementById('home-view');
+            const volunteerView = document.getElementById('volunteer-view');
+            const aboutView = document.getElementById('about-view');
+            
+            // Scroll to top immediately to mimic full page transitions
+            window.scrollTo({ top: 0, behavior: 'instant' });
+
+            if (homeView && volunteerView && aboutView) {
+                homeView.classList.add('hidden');
+                volunteerView.classList.add('hidden');
+                aboutView.classList.add('hidden');
+
+                if (hash === '#volunteer' || hash === '#join-our-mission') {
+                    volunteerView.classList.remove('hidden');
+                } else if (hash === '#about' || hash === '#about-trust') {
+                    aboutView.classList.remove('hidden');
+                } else {
+                    homeView.classList.remove('hidden');
+                    // If there's an anchor hash, scroll to it smoothly
+                    if (hash && hash !== '#home') {
+                        setTimeout(() => {
+                            try {
+                                const element = document.querySelector(hash);
+                                if (element) {
+                                    element.scrollIntoView({ behavior: 'smooth' });
+                                }
+                            } catch (e) {
+                                console.log("Anchor element not found: ", hash);
+                            }
+                        }, 10);
+                    }
+                }
+            }
+        }
+
+        window.addEventListener('hashchange', handleRouting);
+        window.addEventListener('load', handleRouting);
+
+        // Handle volunteer / partner form submission and success feedback state
+        const volunteerForm = document.getElementById('volunteer-form');
+        const formContainer = document.getElementById('form-container');
+        const successState = document.getElementById('volunteer-success');
+        const resetBtn = document.getElementById('v-reset-btn');
+
+        if (volunteerForm) {
+            volunteerForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                // Grab form data to mimic a real submission
+                const name = document.getElementById('v-name').value;
+                const email = document.getElementById('v-email').value;
+                const phone = document.getElementById('v-phone').value;
+                const role = document.getElementById('v-role').value;
+                
+                console.log("Volunteer application submitted successfully:", { name, email, phone, role });
+
+                // Transition states
+                formContainer.classList.add('hidden');
+                successState.classList.remove('hidden');
+            });
+        }
+
+        if (resetBtn) {
+            resetBtn.addEventListener('click', () => {
+                volunteerForm.reset();
+                successState.classList.add('hidden');
+                formContainer.classList.remove('hidden');
+            });
+        }
 
         // Scroll animations using IntersectionObserver
         const observerOptions = {
