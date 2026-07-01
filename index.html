@@ -89,19 +89,20 @@
                 </a>
 
                 <!-- Desktop Nav -->
-                <nav class="hidden lg:flex items-center gap-8">
-                    <a href="#home" class="text-sm font-medium text-muted hover:text-teal transition-colors">Home</a>
-                    <a href="#about" class="text-sm font-medium text-muted hover:text-teal transition-colors">About SQA</a>
-                    <a href="#mission" class="text-sm font-medium text-muted hover:text-teal transition-colors">Our Mission</a>
-                    <a href="#project" class="text-sm font-medium text-muted hover:text-teal transition-colors">Hospital Project</a>
-                    <a href="#services" class="text-sm font-medium text-muted hover:text-teal transition-colors">Services</a>
-                    <a href="#volunteer" class="text-sm font-medium text-muted hover:text-teal transition-colors">Volunteer</a>
-                    <a href="#news" class="text-sm font-medium text-muted hover:text-teal transition-colors">News</a>
-                    <a href="#contact" class="text-sm font-medium text-muted hover:text-teal transition-colors">Contact</a>
+                <nav class="hidden lg:flex items-center gap-3 xl:gap-6">
+                    <a href="#home" class="text-[13px] xl:text-sm font-medium text-muted hover:text-teal transition-colors whitespace-nowrap">Home</a>
+                    <a href="#about" class="text-[13px] xl:text-sm font-medium text-muted hover:text-teal transition-colors whitespace-nowrap">About SQA</a>
+                    <a href="#mission" class="text-[13px] xl:text-sm font-medium text-muted hover:text-teal transition-colors whitespace-nowrap">Our Mission</a>
+                    <a href="#message" class="text-[13px] xl:text-sm font-medium text-muted hover:text-teal transition-colors whitespace-nowrap">Our Message</a>
+                    <a href="#project" class="text-[13px] xl:text-sm font-medium text-muted hover:text-teal transition-colors whitespace-nowrap">Hospital Project</a>
+                    <a href="#services" class="text-[13px] xl:text-sm font-medium text-muted hover:text-teal transition-colors whitespace-nowrap">Services</a>
+                    <a href="#volunteer" class="text-[13px] xl:text-sm font-medium text-muted hover:text-teal transition-colors whitespace-nowrap">Volunteer</a>
+                    <a href="#news" class="text-[13px] xl:text-sm font-medium text-muted hover:text-teal transition-colors whitespace-nowrap">News</a>
+                    <a href="#contact" class="text-[13px] xl:text-sm font-medium text-muted hover:text-teal transition-colors whitespace-nowrap">Contact</a>
                 </nav>
 
-                <div class="hidden lg:block">
-                    <a href="#donate" class="bg-teal text-white px-6 py-2.5 rounded-full text-sm font-medium hover:bg-opacity-90 transition-all">Donate</a>
+                <div class="hidden lg:block ml-2">
+                    <a href="#donate" class="bg-teal text-white px-5 xl:px-6 py-2 xl:py-2.5 rounded-full text-[13px] xl:text-sm font-medium hover:bg-opacity-90 transition-all whitespace-nowrap">Donate</a>
                 </div>
 
                 <!-- Mobile Menu Button -->
@@ -117,6 +118,7 @@
                 <a href="#home" class="mobile-link text-base font-medium text-navy">Home</a>
                 <a href="#about" class="mobile-link text-base font-medium text-navy">About SQA</a>
                 <a href="#mission" class="mobile-link text-base font-medium text-navy">Our Mission</a>
+                <a href="#message" class="mobile-link text-base font-medium text-navy">Our Message</a>
                 <a href="#project" class="mobile-link text-base font-medium text-navy">Hospital Project</a>
                 <a href="#services" class="mobile-link text-base font-medium text-navy">Services</a>
                 <a href="#donate" class="mobile-link text-base font-medium text-teal">Donate</a>
@@ -158,7 +160,7 @@
         </section>
 
         <!-- 2. Our Vision -->
-        <section id="mission" class="py-24 bg-lavender px-4 sm:px-6 lg:px-8 fade-in-up">
+        <section id="home-vision" class="py-24 bg-lavender px-4 sm:px-6 lg:px-8 fade-in-up">
             <div class="max-w-4xl mx-auto text-center space-y-8">
                 <div class="w-16 h-16 mx-auto flex items-center justify-center text-teal">
                     <i data-lucide="quote" class="w-10 h-10 opacity-50"></i>
@@ -311,7 +313,7 @@
         </section>
 
         <!-- 5. Construction Progress -->
-        <section id="project" class="py-24 bg-lightgray px-4 sm:px-6 lg:px-8 fade-in-up">
+        <section id="home-project" class="py-24 bg-lightgray px-4 sm:px-6 lg:px-8 fade-in-up">
             <div class="max-w-3xl mx-auto">
                 <div class="text-center mb-16">
                     <h2 class="text-3xl font-medium text-navy tracking-tight">Construction Progress</h2>
@@ -497,6 +499,188 @@
                         </p>
                         <a href="#volunteer" class="inline-flex items-center gap-2 px-8 py-3.5 bg-teal text-white rounded-full font-medium mt-8 hover:bg-opacity-90 transition-colors hover-lift">
                             Join Our Mission
+                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Our Mission View -->
+        <div id="mission-view" class="hidden">
+            <!-- Section Header -->
+            <div class="bg-lavender py-12 border-b border-gray-100">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <nav class="flex mb-4 text-sm text-muted" aria-label="Breadcrumb">
+                        <a href="#home" class="hover:text-teal transition-colors flex items-center gap-1">
+                            <i data-lucide="arrow-left" class="w-4 h-4 text-teal"></i> Back to Homepage
+                        </a>
+                    </nav>
+                    <h1 class="text-3xl md:text-5xl font-medium text-navy tracking-tight">Our Mission</h1>
+                    <p class="text-teal mt-2 font-medium">Building a healthier, stronger, and more compassionate India.</p>
+                </div>
+            </div>
+
+            <!-- Content -->
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+                <div class="prose prose-slate max-w-none font-light leading-relaxed text-muted text-lg space-y-8">
+                    <p class="text-navy font-normal text-xl leading-relaxed mb-6">
+                        Our mission is to build a healthier, stronger, and more compassionate India by empowering women, supporting families, and creating opportunities that transform lives for generations to come.
+                    </p>
+                    <p>
+                        At SQA Social Welfare Trust, we believe that every mother, daughter, sister, and child deserves access to quality healthcare, education, dignity, and hope—regardless of religion, caste, community, language, or financial background.
+                    </p>
+                    
+                    <div class="p-8 bg-softpink rounded-2xl border-l-4 border-teal my-8">
+                        <h3 class="font-medium text-navy text-xl mb-3 font-semibold">Our First Initiative</h3>
+                        <p class="text-base text-navy/90 leading-relaxed font-light mb-4">
+                            Our first and foremost initiative is the establishment of <strong>Mother Care &amp; Women's Hospital</strong>, a women-centered charitable hospital envisioned to provide compassionate, affordable, and high-quality healthcare in an environment where privacy, respect, dignity, and trust are never compromised.
+                        </p>
+                        <p class="text-base text-navy/90 leading-relaxed font-light">
+                            We believe that when a woman feels safe and comfortable, she can openly discuss her health concerns and receive the care she truly deserves. Wherever practical and appropriate, our goal is to provide women with care from qualified female healthcare professionals in a setting designed around their comfort and confidentiality.
+                        </p>
+                    </div>
+
+                    <h3 class="text-navy font-medium text-2xl mt-10 mb-4 font-semibold">But this hospital is only the beginning.</h3>
+                    <p>
+                        As our Trust grows, our vision extends far beyond healthcare. We aspire to expand into education, skill development, employment support, technology, community welfare, and other initiatives that help people become self-reliant and create brighter futures for their families.
+                    </p>
+                    
+                    <p>
+                        We are not driven by profit, recognition, or personal success. We are driven by service and by the belief that empowering women strengthens families, empowering families strengthens communities, and empowering communities strengthens the nation.
+                    </p>
+
+                    <div class="bg-navy text-white rounded-3xl p-8 text-center mt-12 shadow-lg">
+                        <h4 class="font-semibold text-xl md:text-2xl mb-4 text-softpink">We cannot build this vision alone.</h4>
+                        <p class="text-gray-300 font-light max-w-2xl mx-auto leading-relaxed">
+                            It will take compassionate citizens who believe in giving back to society and investing in future generations. Together, we are not merely constructing a hospital—we are building trust, creating opportunity, restoring dignity, and laying the foundation for a healthier, more educated, and more united India.
+                        </p>
+                        <a href="#volunteer" class="inline-flex items-center gap-2 px-8 py-3.5 bg-teal text-white rounded-full font-medium mt-8 hover:bg-opacity-90 transition-colors hover-lift">
+                            Become a Volunteer
+                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project View -->
+        <div id="project-view" class="hidden">
+            <!-- Section Header -->
+            <div class="bg-lavender py-12 border-b border-gray-100">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <nav class="flex mb-4 text-sm text-muted" aria-label="Breadcrumb">
+                        <a href="#home" class="hover:text-teal transition-colors flex items-center gap-1">
+                            <i data-lucide="arrow-left" class="w-4 h-4 text-teal"></i> Back to Homepage
+                        </a>
+                    </nav>
+                    <h1 class="text-3xl md:text-5xl font-medium text-navy tracking-tight">Hospital Project</h1>
+                    <p class="text-teal mt-2 font-medium">Mother Care & Women's Hospital</p>
+                </div>
+            </div>
+
+            <!-- Content -->
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+                <div class="prose prose-slate max-w-none font-light leading-relaxed text-muted text-lg space-y-8">
+                    <p class="text-navy font-normal text-xl leading-relaxed mb-6">
+                        Our mission is to build a healthier, stronger, and more compassionate India by empowering women, supporting families, and creating opportunities that transform lives for generations to come.
+                    </p>
+                    <p>
+                        At SQA Social Welfare Trust, we believe that every mother, daughter, sister, and child deserves access to quality healthcare, education, dignity, and hope—regardless of religion, caste, community, language, or financial background.
+                    </p>
+                    
+                    <div class="p-8 bg-softpink rounded-2xl border-l-4 border-teal my-8">
+                        <h3 class="font-medium text-navy text-xl mb-3 font-semibold">Our First Initiative</h3>
+                        <p class="text-base text-navy/90 leading-relaxed font-light mb-4">
+                            Our first and foremost initiative is the establishment of <strong>Mother Care &amp; Women's Hospital</strong>, a women-centered charitable hospital envisioned to provide compassionate, affordable, and high-quality healthcare in an environment where privacy, respect, dignity, and trust are never compromised.
+                        </p>
+                        <p class="text-base text-navy/90 leading-relaxed font-light">
+                            We believe that when a woman feels safe and comfortable, she can openly discuss her health concerns and receive the care she truly deserves. Wherever practical and appropriate, our goal is to provide women with care from qualified female healthcare professionals in a setting designed around their comfort and confidentiality.
+                        </p>
+                    </div>
+
+                    <h3 class="text-navy font-medium text-2xl mt-10 mb-4 font-semibold">But this hospital is only the beginning.</h3>
+                    <p>
+                        As our Trust grows, our vision extends far beyond healthcare. We aspire to expand into education, skill development, employment support, technology, community welfare, and other initiatives that help people become self-reliant and create brighter futures for their families.
+                    </p>
+                    
+                    <p>
+                        We are not driven by profit, recognition, or personal success. We are driven by service and by the belief that empowering women strengthens families, empowering families strengthens communities, and empowering communities strengthens the nation.
+                    </p>
+
+                    <div class="bg-navy text-white rounded-3xl p-8 text-center mt-12 shadow-lg">
+                        <h4 class="font-semibold text-xl md:text-2xl mb-4 text-softpink">We cannot build this vision alone.</h4>
+                        <p class="text-gray-300 font-light max-w-2xl mx-auto leading-relaxed">
+                            It will take compassionate citizens who believe in giving back to society and investing in future generations. Together, we are not merely constructing a hospital—we are building trust, creating opportunity, restoring dignity, and laying the foundation for a healthier, more educated, and more united India.
+                        </p>
+                        <a href="#volunteer" class="inline-flex items-center gap-2 px-8 py-3.5 bg-teal text-white rounded-full font-medium mt-8 hover:bg-opacity-90 transition-colors hover-lift">
+                            Become a Volunteer
+                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Our Message View -->
+        <div id="message-view" class="hidden">
+            <!-- Section Header -->
+            <div class="bg-lavender py-12 border-b border-gray-100">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <nav class="flex mb-4 text-sm text-muted" aria-label="Breadcrumb">
+                        <a href="#home" class="hover:text-teal transition-colors flex items-center gap-1">
+                            <i data-lucide="arrow-left" class="w-4 h-4 text-teal"></i> Back to Homepage
+                        </a>
+                    </nav>
+                    <h1 class="text-3xl md:text-5xl font-medium text-navy tracking-tight">Our Message</h1>
+                    <p class="text-teal mt-2 font-medium">Every great movement begins with a single decision.</p>
+                </div>
+            </div>
+
+            <!-- Content -->
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+                <div class="prose prose-slate max-w-none font-light leading-relaxed text-muted text-lg space-y-8">
+                    <p class="text-navy font-normal text-xl leading-relaxed mb-6">
+                        Every great movement begins with a single decision—the decision to take responsibility instead of waiting for someone else to act.
+                    </p>
+                    <p>
+                        SQA Social Welfare Trust was not founded by a wealthy corporation or an institution with unlimited resources. We are ordinary people with an extraordinary purpose: to build institutions that improve lives and leave a lasting legacy for future generations. Our first step is <strong>Mother Care &amp; Women's Hospital</strong>, but our vision extends far beyond a single hospital.
+                    </p>
+                    
+                    <div class="p-8 bg-softpink rounded-2xl border-l-4 border-teal my-8">
+                        <h3 class="font-medium text-navy text-xl mb-3 font-semibold">Our Dream for India</h3>
+                        <p class="text-base text-navy/90 leading-relaxed font-light mb-4">
+                            We dream of an India where every woman receives healthcare with dignity, every child has access to opportunity, every family can dream without fear, and every individual is treated with compassion and respect.
+                        </p>
+                        <p class="text-base text-navy/90 leading-relaxed font-light">
+                            As our Trust grows, we aspire to expand into education, skill development, employment support, technology, and community development—creating opportunities that empower people to build better lives.
+                        </p>
+                    </div>
+
+                    <h3 class="text-navy font-medium text-2xl mt-10 mb-4 font-semibold">Service is Our Purpose</h3>
+                    <p>
+                        Our work will always remain free from discrimination. We welcome and serve every individual with equal respect, regardless of religion, caste, community, language, gender, ethnicity, or financial background. Humanity is our identity, and service is our purpose.
+                    </p>
+                    
+                    <p>
+                        We know this journey will not be easy. We are not backed by unlimited wealth, but we are backed by unwavering determination. Whether this mission is completed with the support of thousands or through years of persistent effort, we will not stop. Challenges may slow us, but they will never define us. Our commitment is stronger than our circumstances.
+                    </p>
+                    
+                    <p>
+                        However, together we can achieve far more than any one organization can achieve alone. We are not only seeking donations. We are looking for visionaries, mentors, doctors, healthcare professionals, educators, entrepreneurs, architects, engineers, legal experts, volunteers, philanthropists, and compassionate citizens who believe that meaningful change is possible. Your ideas, experience, guidance, encouragement, and support are as valuable as any financial contribution.
+                    </p>
+
+                    <div class="bg-navy text-white rounded-3xl p-8 text-center mt-12 shadow-lg">
+                        <h4 class="font-semibold text-xl md:text-2xl mb-4 text-softpink">We are inviting you to become part of India's future.</h4>
+                        <p class="text-gray-300 font-light max-w-2xl mx-auto leading-relaxed mb-6">
+                            If our vision inspires you, we invite you to walk beside us—not as donors alone, but as partners in building a better tomorrow. Ask questions. Guide us. Hold us accountable. Help us improve. Together, let us create institutions that stand for compassion instead of profit, dignity instead of discrimination, and service instead of self-interest.
+                        </p>
+                        <p class="text-teal font-medium">We are not asking you to build our dream.</p>
+                        <p class="text-gray-300 font-light max-w-2xl mx-auto leading-relaxed mt-4">
+                            Together, let us build institutions that future generations will proudly inherit, and let our work remind the world that when ordinary people unite with honesty, courage, and compassion, extraordinary things become possible.
+                        </p>
+                        <a href="#volunteer" class="inline-flex items-center gap-2 px-8 py-3.5 bg-teal text-white rounded-full font-medium mt-8 hover:bg-opacity-90 transition-colors hover-lift">
+                            Walk Beside Us
                             <i data-lucide="arrow-right" class="w-4 h-4"></i>
                         </a>
                     </div>
@@ -777,19 +961,31 @@
             const homeView = document.getElementById('home-view');
             const volunteerView = document.getElementById('volunteer-view');
             const aboutView = document.getElementById('about-view');
+            const missionView = document.getElementById('mission-view');
+            const projectView = document.getElementById('project-view');
+            const messageView = document.getElementById('message-view');
             
             // Scroll to top immediately to mimic full page transitions
             window.scrollTo({ top: 0, behavior: 'instant' });
 
-            if (homeView && volunteerView && aboutView) {
+            if (homeView && volunteerView && aboutView && missionView && projectView && messageView) {
                 homeView.classList.add('hidden');
                 volunteerView.classList.add('hidden');
                 aboutView.classList.add('hidden');
+                missionView.classList.add('hidden');
+                projectView.classList.add('hidden');
+                messageView.classList.add('hidden');
 
                 if (hash === '#volunteer' || hash === '#join-our-mission') {
                     volunteerView.classList.remove('hidden');
                 } else if (hash === '#about' || hash === '#about-trust') {
                     aboutView.classList.remove('hidden');
+                } else if (hash === '#mission' || hash === '#our-mission') {
+                    missionView.classList.remove('hidden');
+                } else if (hash === '#project' || hash === '#hospital-project') {
+                    projectView.classList.remove('hidden');
+                } else if (hash === '#message' || hash === '#our-message') {
+                    messageView.classList.remove('hidden');
                 } else {
                     homeView.classList.remove('hidden');
                     // If there's an anchor hash, scroll to it smoothly
