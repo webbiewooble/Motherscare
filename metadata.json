@@ -1,0 +1,6 @@
+{
+  "name": "Mother Care Women & Child Hospital",
+  "description": "Clean, minimalist, and professionally appealing NGO website for Mother Care Women & Child Hospital.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
