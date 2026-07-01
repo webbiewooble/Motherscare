@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mother Care Women & Child Hospital</title>
-    <!-- Google Fonts -->
+    <title>Mother Care Women's Hospital</title>
+    
+    <!-- Google Fonts: Using Inter for a clean, professional, minimalist look -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     
-    <!-- Tailwind CSS via CDN for Standalone HTML -->
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -17,24 +18,14 @@
                 extend: {
                     fontFamily: {
                         sans: ['Inter', 'sans-serif'],
-                        display: ['Plus Jakarta Sans', 'sans-serif'],
                     },
                     colors: {
-                        brand: {
-                            50: '#f0fdf9',
-                            100: '#ccfbf0',
-                            500: '#14b8a6',
-                            600: '#0d9488',
-                            700: '#0f766e',
-                            800: '#115e59',
-                            900: '#134e4a',
-                        },
-                        accent: {
-                            50: '#fff1f2',
-                            100: '#ffe4e6',
-                            500: '#f43f5e',
-                            600: '#e11d48',
-                        }
+                        navy: '#0f172a',      // Dark Navy for text
+                        teal: '#0d9488',      // Teal for buttons/accents
+                        lavender: '#faf5ff',  // Soft Lavender for sections
+                        softpink: '#fdf2f8',  // Soft Pink for highlights/donation
+                        lightgray: '#f8fafc', // Light Gray for cards/surface
+                        muted: '#64748b',     // Secondary text
                     }
                 }
             }
@@ -45,435 +36,429 @@
     <script src="https://unpkg.com/lucide@latest"></script>
     
     <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #fafafa;
+        body { 
+            font-family: 'Inter', sans-serif; 
+            color: #0f172a; 
+            background-color: #ffffff; 
+            -webkit-font-smoothing: antialiased;
         }
-        .font-display {
-            font-family: 'Plus Jakarta Sans', sans-serif;
+        
+        /* Animations */
+        img {
+            animation: fadeIn 0.8s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .hover-lift {
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .hover-lift:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px -8px rgba(0, 0, 0, 0.08), 0 4px 8px -4px rgba(0, 0, 0, 0.03);
+        }
+
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        
+        .fade-in-up.is-visible {
+            opacity: 1;
+            transform: translateY(0);
         }
     </style>
 </head>
-<body class="text-gray-800 antialiased overflow-x-hidden flex flex-col min-h-screen">
+<body class="flex flex-col min-h-screen">
 
-    <!-- Header Navigation -->
-    <header class="fixed w-full top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-100 transition-all duration-300">
+    <!-- Navigation Bar -->
+    <header class="fixed w-full top-0 z-50 bg-white/90 backdrop-blur-sm border-b border-gray-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-20">
                 <!-- Logo -->
-                <a href="#home" class="flex items-center gap-3 group">
-                    <div class="w-10 h-10 rounded-full bg-brand-600 flex items-center justify-center text-white shadow-sm transition-transform group-hover:scale-105">
-                        <i data-lucide="heart-handshake" class="w-5 h-5"></i>
+                <a href="#home" class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-full bg-lightgray flex items-center justify-center text-teal border border-gray-200">
+                        <i data-lucide="heart" class="w-5 h-5"></i>
                     </div>
-                    <div>
-                        <span class="font-display font-bold text-lg tracking-tight text-gray-900 block leading-none">MOTHER CARE</span>
-                        <span class="text-[10px] uppercase tracking-wider text-brand-600 font-semibold block mt-1">Women & Child Hospital</span>
-                    </div>
+                    <span class="font-medium text-lg tracking-tight text-navy">Mother Care</span>
                 </a>
 
                 <!-- Desktop Nav -->
-                <nav class="hidden md:flex gap-8">
-                    <a href="#home" class="text-sm font-medium text-gray-600 hover:text-brand-600 transition-colors">Home</a>
-                    <a href="#about" class="text-sm font-medium text-gray-600 hover:text-brand-600 transition-colors">About Us</a>
-                    <a href="#services" class="text-sm font-medium text-gray-600 hover:text-brand-600 transition-colors">Services</a>
-                    <a href="#why-choose-us" class="text-sm font-medium text-gray-600 hover:text-brand-600 transition-colors">Why Choose Us</a>
-                    <a href="#commitment" class="text-sm font-medium text-gray-600 hover:text-brand-600 transition-colors">Commitment</a>
-                    <a href="#contact" class="text-sm font-medium text-gray-600 hover:text-brand-600 transition-colors">Contact</a>
+                <nav class="hidden lg:flex items-center gap-8">
+                    <a href="#home" class="text-sm font-medium text-muted hover:text-teal transition-colors">Home</a>
+                    <a href="#about" class="text-sm font-medium text-muted hover:text-teal transition-colors">About Trust</a>
+                    <a href="#mission" class="text-sm font-medium text-muted hover:text-teal transition-colors">Our Mission</a>
+                    <a href="#project" class="text-sm font-medium text-muted hover:text-teal transition-colors">Hospital Project</a>
+                    <a href="#services" class="text-sm font-medium text-muted hover:text-teal transition-colors">Services</a>
+                    <a href="#volunteer" class="text-sm font-medium text-muted hover:text-teal transition-colors">Volunteer</a>
+                    <a href="#news" class="text-sm font-medium text-muted hover:text-teal transition-colors">News</a>
+                    <a href="#contact" class="text-sm font-medium text-muted hover:text-teal transition-colors">Contact</a>
                 </nav>
 
+                <div class="hidden lg:block">
+                    <a href="#donate" class="bg-teal text-white px-6 py-2.5 rounded-full text-sm font-medium hover:bg-opacity-90 transition-all">Donate</a>
+                </div>
+
                 <!-- Mobile Menu Button -->
-                <button id="mobile-menu-btn" class="md:hidden p-2 text-gray-600 hover:text-brand-600 transition-colors">
+                <button id="mobile-menu-btn" class="lg:hidden p-2 text-navy">
                     <i data-lucide="menu" class="w-6 h-6"></i>
                 </button>
             </div>
         </div>
 
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-gray-100 absolute w-full left-0 top-full shadow-lg">
-            <nav class="flex flex-col px-6 py-4 gap-4">
-                <a href="#home" class="mobile-link text-base font-medium text-gray-700 hover:text-brand-600">Home</a>
-                <a href="#about" class="mobile-link text-base font-medium text-gray-700 hover:text-brand-600">About Us</a>
-                <a href="#services" class="mobile-link text-base font-medium text-gray-700 hover:text-brand-600">Services</a>
-                <a href="#why-choose-us" class="mobile-link text-base font-medium text-gray-700 hover:text-brand-600">Why Choose Us</a>
-                <a href="#commitment" class="mobile-link text-base font-medium text-gray-700 hover:text-brand-600">Commitment</a>
-                <a href="#contact" class="mobile-link text-base font-medium text-gray-700 hover:text-brand-600">Contact Us</a>
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-gray-100 absolute w-full left-0 top-full shadow-sm">
+            <nav class="flex flex-col px-6 py-6 gap-5">
+                <a href="#home" class="mobile-link text-base font-medium text-navy">Home</a>
+                <a href="#about" class="mobile-link text-base font-medium text-navy">About Trust</a>
+                <a href="#mission" class="mobile-link text-base font-medium text-navy">Our Mission</a>
+                <a href="#project" class="mobile-link text-base font-medium text-navy">Hospital Project</a>
+                <a href="#services" class="mobile-link text-base font-medium text-navy">Services</a>
+                <a href="#donate" class="mobile-link text-base font-medium text-teal">Donate</a>
+                <a href="#volunteer" class="mobile-link text-base font-medium text-navy">Volunteer</a>
+                <a href="#contact" class="mobile-link text-base font-medium text-navy">Contact</a>
             </nav>
         </div>
     </header>
 
     <main class="flex-grow pt-20">
-        <!-- Hero Section -->
-        <section id="home" class="relative pt-16 pb-20 lg:pt-24 lg:pb-28 bg-gradient-to-b from-brand-50/50 via-white to-white overflow-hidden">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                    <div class="space-y-8 text-center lg:text-left z-10">
-                        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-50 border border-brand-100 text-brand-700 text-xs font-semibold uppercase tracking-wider mx-auto lg:mx-0">
-                            <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
-                            <span>Care Beyond Cost</span>
-                        </div>
-                        
-                        <div class="space-y-4">
-                            <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 tracking-tight leading-[1.1]">
-                                Welcome to <span class="text-brand-600">Mother Care</span> Women & Child Hospital
-                            </h1>
-                        </div>
-
-                        <p class="text-base sm:text-lg text-gray-600 leading-relaxed font-light max-w-2xl mx-auto lg:mx-0">
-                            Mother Care Women & Child Hospital is an upcoming healthcare institution dedicated to providing quality healthcare services for women, mothers, newborns, and children in Sahaswan and surrounding communities.
-                        </p>
-
-                        <div class="p-5 rounded-2xl bg-white border border-gray-100 shadow-sm max-w-xl mx-auto lg:mx-0 text-left flex gap-4 items-start">
-                            <div class="p-2.5 rounded-xl bg-accent-50 text-accent-500 shrink-0">
-                                <i data-lucide="heart" class="w-5 h-5"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-display font-semibold text-sm text-gray-900">Our Vision</h4>
-                                <p class="text-xs sm:text-sm text-gray-500 mt-1 leading-relaxed">
-                                    To create a trusted healthcare center where every mother receives safe and compassionate care, and every child gets the healthiest possible start in life.
-                                </p>
-                            </div>
-                        </div>
-
-                        <p class="font-display text-lg font-medium text-brand-700 max-w-2xl mx-auto lg:mx-0">
-                            We believe quality healthcare should be accessible, affordable, and available close to home.
-                        </p>
-                        
-                        <div class="pt-4">
-                            <a href="#services" class="inline-flex items-center justify-center gap-2 text-sm font-semibold uppercase tracking-wider text-white bg-brand-600 hover:bg-brand-700 px-8 py-4 rounded-xl transition-all shadow-md">
-                                Explore Services
-                                <i data-lucide="arrow-right" class="w-4 h-4"></i>
-                            </a>
-                        </div>
+        <!-- 1. Hero Section -->
+        <section id="home" class="py-16 md:py-24 lg:py-32 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto fade-in-up">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                <div class="max-w-2xl">
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-medium tracking-tight text-navy leading-[1.15]">
+                        A safe space where every woman receives compassionate care.
+                    </h1>
+                    <p class="mt-6 text-lg text-muted leading-relaxed font-light">
+                        Building India's first women-only hospital operated entirely by women. Our trust is building a dedicated facility to provide healthcare in an environment of comfort, dignity, and privacy.
+                    </p>
+                    <div class="mt-10 flex flex-wrap gap-4">
+                        <a href="#donate" class="px-8 py-3.5 bg-teal text-white rounded-full font-medium hover:bg-opacity-90 transition-colors hover-lift">
+                            Donate Now
+                        </a>
+                        <a href="#volunteer" class="px-8 py-3.5 bg-white text-navy rounded-full font-medium border border-gray-200 hover:border-gray-300 hover:bg-gray-50 transition-all hover-lift">
+                            Join Our Mission
+                        </a>
+                        <a href="#about" class="px-8 py-3.5 text-navy rounded-full font-medium hover:text-teal transition-colors underline-offset-4 hover:underline">
+                            Learn More
+                        </a>
                     </div>
-                    
-                    <div class="relative z-10 hidden lg:block">
-                        <div class="aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl border border-white bg-brand-50 relative">
-                             <img src="https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&q=80&w=800" alt="Mother and Child Care" class="w-full h-full object-cover object-center">
-                             <div class="absolute inset-0 bg-brand-900/10 mix-blend-multiply"></div>
+                </div>
+                <div class="relative w-full aspect-[4/3] lg:aspect-[3/4] rounded-2xl overflow-hidden bg-lightgray">
+                    <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=80&w=1200" alt="Female Doctors and Nurses providing care" class="w-full h-full object-cover">
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Our Vision -->
+        <section id="mission" class="py-24 bg-lavender px-4 sm:px-6 lg:px-8 fade-in-up">
+            <div class="max-w-4xl mx-auto text-center space-y-8">
+                <div class="w-16 h-16 mx-auto flex items-center justify-center text-teal">
+                    <i data-lucide="quote" class="w-10 h-10 opacity-50"></i>
+                </div>
+                <h2 class="text-2xl sm:text-3xl lg:text-4xl font-medium text-navy leading-relaxed tracking-tight">
+                    We believe every woman deserves healthcare in an environment where she feels respected, understood, and secure.
+                </h2>
+            </div>
+        </section>
+
+        <!-- 3. Why This Hospital? -->
+        <section id="why-us" class="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto fade-in-up">
+            <div class="mb-16 max-w-2xl">
+                <h2 class="text-3xl font-medium text-navy tracking-tight">Why This Hospital?</h2>
+                <p class="text-muted mt-4 font-light text-lg">A sanctuary of healing designed entirely around the needs and privacy of women.</p>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+                <div class="flex flex-col gap-4 p-6 bg-lightgray rounded-2xl hover-lift">
+                    <div class="w-10 h-10 text-teal flex items-center">
+                        <i data-lucide="stethoscope" class="w-6 h-6"></i>
+                    </div>
+                    <span class="font-medium text-navy text-sm">Female Doctors</span>
+                </div>
+                <div class="flex flex-col gap-4 p-6 bg-lightgray rounded-2xl hover-lift">
+                    <div class="w-10 h-10 text-teal flex items-center">
+                        <i data-lucide="cross" class="w-6 h-6"></i>
+                    </div>
+                    <span class="font-medium text-navy text-sm">Female Nurses</span>
+                </div>
+                <div class="flex flex-col gap-4 p-6 bg-lightgray rounded-2xl hover-lift">
+                    <div class="w-10 h-10 text-teal flex items-center">
+                        <i data-lucide="building-2" class="w-6 h-6"></i>
+                    </div>
+                    <span class="font-medium text-navy text-sm">Women-only Facility</span>
+                </div>
+                <div class="flex flex-col gap-4 p-6 bg-lightgray rounded-2xl hover-lift">
+                    <div class="w-10 h-10 text-teal flex items-center">
+                        <i data-lucide="lock" class="w-6 h-6"></i>
+                    </div>
+                    <span class="font-medium text-navy text-sm">Privacy</span>
+                </div>
+                <div class="flex flex-col gap-4 p-6 bg-lightgray rounded-2xl hover-lift">
+                    <div class="w-10 h-10 text-teal flex items-center">
+                        <i data-lucide="heart" class="w-6 h-6"></i>
+                    </div>
+                    <span class="font-medium text-navy text-sm">Compassion</span>
+                </div>
+                <div class="flex flex-col gap-4 p-6 bg-lightgray rounded-2xl hover-lift">
+                    <div class="w-10 h-10 text-teal flex items-center">
+                        <i data-lucide="flower-2" class="w-6 h-6"></i>
+                    </div>
+                    <span class="font-medium text-navy text-sm">Dignity</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Hospital Features -->
+        <section id="services" class="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-gray-100 fade-in-up">
+            <div class="mb-16 max-w-2xl">
+                <h2 class="text-3xl font-medium text-navy tracking-tight">Hospital Features</h2>
+                <p class="text-muted mt-4 font-light text-lg">Comprehensive medical care tailored for women.</p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="p-8 rounded-2xl bg-lightgray border border-transparent hover:border-gray-200 transition-colors hover-lift">
+                    <h3 class="font-medium text-lg text-navy mb-2">Gynecology</h3>
+                    <p class="text-sm text-muted font-light">Complete care across all stages of a woman's life.</p>
+                </div>
+                <div class="p-8 rounded-2xl bg-lightgray border border-transparent hover:border-gray-200 transition-colors hover-lift">
+                    <h3 class="font-medium text-lg text-navy mb-2">Obstetrics</h3>
+                    <p class="text-sm text-muted font-light">Safe pregnancy, delivery, and postpartum support.</p>
+                </div>
+                <div class="p-8 rounded-2xl bg-lightgray border border-transparent hover:border-gray-200 transition-colors hover-lift">
+                    <h3 class="font-medium text-lg text-navy mb-2">Pediatrics</h3>
+                    <p class="text-sm text-muted font-light">Expert newborn and child healthcare services.</p>
+                </div>
+                <div class="p-8 rounded-2xl bg-lightgray border border-transparent hover:border-gray-200 transition-colors hover-lift">
+                    <h3 class="font-medium text-lg text-navy mb-2">Cancer Screening</h3>
+                    <p class="text-sm text-muted font-light">Early detection and preventive oncology.</p>
+                </div>
+                <div class="p-8 rounded-2xl bg-lightgray border border-transparent hover:border-gray-200 transition-colors hover-lift">
+                    <h3 class="font-medium text-lg text-navy mb-2">Mental Health</h3>
+                    <p class="text-sm text-muted font-light">Counseling and psychological support in a safe space.</p>
+                </div>
+                <div class="p-8 rounded-2xl bg-lightgray border border-transparent hover:border-gray-200 transition-colors hover-lift">
+                    <h3 class="font-medium text-lg text-navy mb-2">Emergency Care</h3>
+                    <p class="text-sm text-muted font-light">24/7 dedicated critical care and ambulance services.</p>
+                </div>
+                <div class="p-8 rounded-2xl bg-lightgray border border-transparent hover:border-gray-200 transition-colors hover-lift">
+                    <h3 class="font-medium text-lg text-navy mb-2">Diagnostics</h3>
+                    <p class="text-sm text-muted font-light">Advanced ultrasound, pathology, and imaging.</p>
+                </div>
+                <div class="p-8 rounded-2xl bg-lightgray border border-transparent hover:border-gray-200 transition-colors hover-lift">
+                    <h3 class="font-medium text-lg text-navy mb-2">Pharmacy</h3>
+                    <p class="text-sm text-muted font-light">In-house availability of all essential medicines.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Construction Progress -->
+        <section id="project" class="py-24 bg-lightgray px-4 sm:px-6 lg:px-8 fade-in-up">
+            <div class="max-w-3xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl font-medium text-navy tracking-tight">Construction Progress</h2>
+                </div>
+                
+                <div class="space-y-4">
+                    <div class="flex items-center gap-4 bg-white p-6 rounded-2xl border border-gray-100">
+                        <div class="w-6 h-6 rounded-full bg-teal text-white flex items-center justify-center shrink-0">
+                            <i data-lucide="check" class="w-4 h-4"></i>
                         </div>
+                        <span class="font-medium text-navy flex-1">Land Acquired</span>
+                    </div>
+                    <div class="flex items-center gap-4 bg-white p-6 rounded-2xl border border-gray-100">
+                        <div class="w-6 h-6 rounded-full bg-teal text-white flex items-center justify-center shrink-0">
+                            <i data-lucide="check" class="w-4 h-4"></i>
+                        </div>
+                        <span class="font-medium text-navy flex-1">Planning</span>
+                    </div>
+                    <div class="flex items-center gap-4 bg-white p-6 rounded-2xl border-2 border-teal shadow-sm">
+                        <div class="w-6 h-6 rounded-full border-2 border-teal text-teal flex items-center justify-center shrink-0">
+                            <div class="w-2 h-2 rounded-full bg-teal"></div>
+                        </div>
+                        <span class="font-medium text-teal flex-1">Construction</span>
+                        <span class="text-xs font-medium bg-teal/10 text-teal px-2 py-1 rounded">In Progress</span>
+                    </div>
+                    <div class="flex items-center gap-4 bg-transparent p-6 rounded-2xl border border-transparent opacity-60">
+                        <div class="w-6 h-6 rounded-full border-2 border-gray-300 shrink-0"></div>
+                        <span class="font-medium text-muted flex-1">Equipment</span>
+                    </div>
+                    <div class="flex items-center gap-4 bg-transparent p-6 rounded-2xl border border-transparent opacity-60">
+                        <div class="w-6 h-6 rounded-full border-2 border-gray-300 shrink-0"></div>
+                        <span class="font-medium text-muted flex-1">Opening Soon</span>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- About Us Section -->
-        <section id="about" class="py-20 lg:py-28 bg-white border-t border-gray-100">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
-                    <h2 class="font-display text-3xl sm:text-4xl font-bold text-gray-900 tracking-tight">About Us</h2>
-                    <div class="w-12 h-1 bg-brand-600 mx-auto rounded-full mt-2"></div>
+        <!-- 6. Impact Numbers -->
+        <section class="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-gray-100 fade-in-up">
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-12 text-center">
+                <div class="space-y-2">
+                    <div class="text-4xl md:text-5xl font-light text-navy tracking-tight">50+</div>
+                    <div class="text-sm font-medium text-muted">Women Doctors</div>
                 </div>
+                <div class="space-y-2">
+                    <div class="text-4xl md:text-5xl font-light text-navy tracking-tight">100+</div>
+                    <div class="text-sm font-medium text-muted">Women Staff</div>
+                </div>
+                <div class="space-y-2">
+                    <div class="text-4xl md:text-5xl font-light text-navy tracking-tight">100</div>
+                    <div class="text-sm font-medium text-muted">Beds</div>
+                </div>
+                <div class="space-y-2">
+                    <div class="text-4xl md:text-5xl font-light text-navy tracking-tight">24×7</div>
+                    <div class="text-sm font-medium text-muted">Emergency</div>
+                </div>
+            </div>
+            <div class="mt-16 text-center">
+                <p class="text-xl font-medium text-teal">Serving thousands of patients every year.</p>
+            </div>
+        </section>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16 items-start">
-                    <div class="space-y-6">
-                        <p class="text-gray-600 leading-relaxed font-light text-lg">
-                            Mother Care Women & Child Hospital is being established with the objective of strengthening women’s and children’s healthcare services in the region.
-                        </p>
-                        <p class="text-gray-600 leading-relaxed font-light text-lg">
-                            The hospital will focus on maternity care, gynecology, newborn care, and pediatric healthcare in a safe, comfortable, and patient-centered environment.
-                        </p>
-                        <p class="text-gray-600 leading-relaxed font-light text-lg font-medium">
-                            Our commitment is to provide high-quality medical services at affordable costs so that families can access healthcare without unnecessary financial burden.
-                        </p>
+        <!-- 7. Donation Section -->
+        <section id="donate" class="py-24 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto fade-in-up">
+            <div class="bg-softpink rounded-3xl p-12 md:p-20 text-center">
+                <h2 class="text-3xl md:text-4xl font-medium text-navy leading-tight mb-6">
+                    Every donation helps build a safer future for women.
+                </h2>
+                <a href="#" class="inline-flex items-center gap-2 px-8 py-4 bg-teal text-white rounded-full font-medium mt-6 hover:bg-opacity-90 transition-colors hover-lift">
+                    Donate Securely
+                    <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </a>
+            </div>
+        </section>
+
+        <!-- 8. Testimonials -->
+        <section class="py-24 bg-lightgray px-4 sm:px-6 lg:px-8 fade-in-up">
+            <div class="max-w-7xl mx-auto">
+                <div class="mb-16">
+                    <h2 class="text-3xl font-medium text-navy tracking-tight text-center">Voices of Support</h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-white p-8 rounded-2xl border border-gray-100 flex flex-col justify-between hover-lift">
+                        <p class="text-muted font-light leading-relaxed mb-8">"A much-needed initiative that will change the landscape of women's healthcare in the region."</p>
+                        <h4 class="font-medium text-navy text-sm">— Future Supporters</h4>
                     </div>
-
-                    <div class="space-y-8">
-                        <div class="p-8 rounded-3xl bg-brand-50 border border-brand-100">
-                            <h3 class="font-display text-xl font-bold text-gray-900 mb-3 flex items-center gap-2">
-                                <i data-lucide="target" class="w-5 h-5 text-brand-600"></i> Our Vision
-                            </h3>
-                            <p class="text-gray-700 leading-relaxed">
-                                To become a trusted center of excellence in women’s and child healthcare by providing quality treatment, compassionate care, and affordable medical services.
-                            </p>
-                        </div>
-
-                        <div class="p-8 rounded-3xl bg-gray-50 border border-gray-100">
-                            <h3 class="font-display text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
-                                <i data-lucide="flag" class="w-5 h-5 text-accent-500"></i> Our Mission
-                            </h3>
-                            <ul class="space-y-3">
-                                <li class="flex items-start gap-3">
-                                    <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-600 shrink-0 mt-0.5"></i>
-                                    <span class="text-gray-700">Safe motherhood for every woman</span>
-                                </li>
-                                <li class="flex items-start gap-3">
-                                    <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-600 shrink-0 mt-0.5"></i>
-                                    <span class="text-gray-700">Quality healthcare for every child</span>
-                                </li>
-                                <li class="flex items-start gap-3">
-                                    <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-600 shrink-0 mt-0.5"></i>
-                                    <span class="text-gray-700">Affordable treatment for all families</span>
-                                </li>
-                                <li class="flex items-start gap-3">
-                                    <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-600 shrink-0 mt-0.5"></i>
-                                    <span class="text-gray-700">Respect, dignity, and privacy for every patient</span>
-                                </li>
-                                <li class="flex items-start gap-3">
-                                    <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-600 shrink-0 mt-0.5"></i>
-                                    <span class="text-gray-700">Healthcare services closer to home</span>
-                                </li>
-                            </ul>
-                        </div>
+                    <div class="bg-white p-8 rounded-2xl border border-gray-100 flex flex-col justify-between hover-lift">
+                        <p class="text-muted font-light leading-relaxed mb-8">"Proud to be part of a team where women empower women through medical excellence."</p>
+                        <h4 class="font-medium text-navy text-sm">— Doctors</h4>
+                    </div>
+                    <div class="bg-white p-8 rounded-2xl border border-gray-100 flex flex-col justify-between hover-lift">
+                        <p class="text-muted font-light leading-relaxed mb-8">"This hospital will provide the dignity and privacy our families have long asked for."</p>
+                        <h4 class="font-medium text-navy text-sm">— Community Leaders</h4>
+                    </div>
+                    <div class="bg-white p-8 rounded-2xl border border-gray-100 flex flex-col justify-between hover-lift">
+                        <p class="text-muted font-light leading-relaxed mb-8">"Volunteering here means actively building a safer environment for the next generation."</p>
+                        <h4 class="font-medium text-navy text-sm">— Volunteers</h4>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Our Services Section -->
-        <section id="services" class="py-20 lg:py-28 bg-gray-50 border-t border-gray-100">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
-                    <h2 class="font-display text-3xl sm:text-4xl font-bold text-gray-900 tracking-tight">Our Services</h2>
-                    <div class="w-12 h-1 bg-brand-600 mx-auto rounded-full mt-2"></div>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    <!-- Women's Healthcare -->
-                    <div class="bg-white rounded-3xl p-6 border border-gray-100 shadow-sm">
-                        <div class="w-12 h-12 rounded-xl bg-brand-50 flex items-center justify-center text-brand-600 mb-6">
-                            <i data-lucide="users" class="w-6 h-6"></i>
-                        </div>
-                        <h3 class="font-display font-bold text-lg text-gray-900 mb-4">Women's Healthcare</h3>
-                        <ul class="space-y-2 text-sm text-gray-600">
-                            <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-brand-400"></div>Gynecology Consultation</li>
-                            <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-brand-400"></div>Pregnancy Care</li>
-                            <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-brand-400"></div>Antenatal Checkups</li>
-                            <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-brand-400"></div>High-Risk Pregnancy Management</li>
-                            <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-brand-400"></div>Menstrual Health Consultation</li>
-                            <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-brand-400"></div>Family Planning Services</li>
-                            <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-brand-400"></div>Postnatal Care</li>
-                        </ul>
-                    </div>
-
-                    <!-- Maternity Services -->
-                    <div class="bg-white rounded-3xl p-6 border border-gray-100 shadow-sm">
-                        <div class="w-12 h-12 rounded-xl bg-accent-50 flex items-center justify-center text-accent-500 mb-6">
-                            <i data-lucide="baby" class="w-6 h-6"></i>
-                        </div>
-                        <h3 class="font-display font-bold text-lg text-gray-900 mb-4">Maternity Services</h3>
-                        <ul class="space-y-2 text-sm text-gray-600">
-                            <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-accent-400"></div>Normal Delivery</li>
-                            <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-accent-400"></div>Painless Normal Delivery</li>
-                            <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-accent-400"></div>Cesarean Section (C-Section)</li>
-                            <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-accent-400"></div>Labour & Delivery Care</li>
-                            <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-accent-400"></div>Emergency Maternity Care</li>
-                        </ul>
-                    </div>
-
-                    <!-- Child & Newborn Care -->
-                    <div class="bg-white rounded-3xl p-6 border border-gray-100 shadow-sm">
-                        <div class="w-12 h-12 rounded-xl bg-brand-50 flex items-center justify-center text-brand-600 mb-6">
-                            <i data-lucide="smile" class="w-6 h-6"></i>
-                        </div>
-                        <h3 class="font-display font-bold text-lg text-gray-900 mb-4">Child & Newborn Care</h3>
-                        <ul class="space-y-2 text-sm text-gray-600">
-                            <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-brand-400"></div>Newborn Care</li>
-                            <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-brand-400"></div>Pediatric Consultation</li>
-                            <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-brand-400"></div>Vaccination & Immunization</li>
-                            <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-brand-400"></div>Child Growth Monitoring</li>
-                            <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-brand-400"></div>Nutritional Guidance</li>
-                        </ul>
-                    </div>
-
-                    <!-- Diagnostic & Support Services -->
-                    <div class="bg-white rounded-3xl p-6 border border-gray-100 shadow-sm">
-                        <div class="w-12 h-12 rounded-xl bg-gray-100 flex items-center justify-center text-gray-700 mb-6">
-                            <i data-lucide="activity" class="w-6 h-6"></i>
-                        </div>
-                        <h3 class="font-display font-bold text-lg text-gray-900 mb-4">Diagnostic & Support</h3>
-                        <ul class="space-y-2 text-sm text-gray-600">
-                            <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-gray-400"></div>Ultrasound Services</li>
-                            <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-gray-400"></div>Laboratory Testing</li>
-                            <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-gray-400"></div>Pharmacy Services</li>
-                            <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-gray-400"></div>Preventive Health Checkups</li>
-                            <li class="flex items-center gap-2"><div class="w-1.5 h-1.5 rounded-full bg-gray-400"></div>Ambulance Support</li>
-                        </ul>
-                    </div>
-                </div>
+        <!-- 9. Gallery -->
+        <section class="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto fade-in-up">
+            <div class="mb-16">
+                <h2 class="text-3xl font-medium text-navy tracking-tight">Gallery</h2>
             </div>
-        </section>
-
-        <!-- Why Choose Us Section -->
-        <section id="why-choose-us" class="py-20 lg:py-28 bg-white border-t border-gray-100">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
-                    <h2 class="font-display text-3xl sm:text-4xl font-bold text-gray-900 tracking-tight">Why Choose Us</h2>
-                    <div class="w-12 h-1 bg-brand-600 mx-auto rounded-full mt-2"></div>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <div class="p-6 border border-gray-100 rounded-2xl flex gap-4">
-                        <i data-lucide="check-circle-2" class="w-6 h-6 text-brand-600 shrink-0"></i>
-                        <span class="font-medium text-gray-800">Dedicated Women & Child Healthcare</span>
-                    </div>
-                    <div class="p-6 border border-gray-100 rounded-2xl flex gap-4">
-                        <i data-lucide="check-circle-2" class="w-6 h-6 text-brand-600 shrink-0"></i>
-                        <span class="font-medium text-gray-800">Experienced Female Healthcare Team</span>
-                    </div>
-                    <div class="p-6 border border-gray-100 rounded-2xl flex gap-4">
-                        <i data-lucide="check-circle-2" class="w-6 h-6 text-brand-600 shrink-0"></i>
-                        <span class="font-medium text-gray-800">Female Staff Support for Women Patients Wherever Possible</span>
-                    </div>
-                    <div class="p-6 border border-gray-100 rounded-2xl flex gap-4">
-                        <i data-lucide="check-circle-2" class="w-6 h-6 text-brand-600 shrink-0"></i>
-                        <span class="font-medium text-gray-800">Strong Focus on Privacy, Dignity, and Comfort for Women</span>
-                    </div>
-                    <div class="p-6 border border-gray-100 rounded-2xl flex gap-4">
-                        <i data-lucide="check-circle-2" class="w-6 h-6 text-brand-600 shrink-0"></i>
-                        <span class="font-medium text-gray-800">Affordable & Transparent Pricing</span>
-                    </div>
-                    <div class="p-6 border border-gray-100 rounded-2xl flex gap-4">
-                        <i data-lucide="check-circle-2" class="w-6 h-6 text-brand-600 shrink-0"></i>
-                        <span class="font-medium text-gray-800">Compassionate Patient Care</span>
-                    </div>
-                    <div class="p-6 border border-gray-100 rounded-2xl flex gap-4">
-                        <i data-lucide="check-circle-2" class="w-6 h-6 text-brand-600 shrink-0"></i>
-                        <span class="font-medium text-gray-800">Modern Healthcare Standards</span>
-                    </div>
-                    <div class="p-6 border border-gray-100 rounded-2xl flex gap-4">
-                        <i data-lucide="check-circle-2" class="w-6 h-6 text-brand-600 shrink-0"></i>
-                        <span class="font-medium text-gray-800">Safe, Clean, and Hygienic Environment</span>
-                    </div>
-                    <div class="p-6 border border-gray-100 rounded-2xl flex gap-4">
-                        <i data-lucide="check-circle-2" class="w-6 h-6 text-brand-600 shrink-0"></i>
-                        <span class="font-medium text-gray-800">Healthcare Services Close to Home</span>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="group relative aspect-square rounded-2xl overflow-hidden bg-lightgray hover-lift">
+                    <img src="https://images.unsplash.com/photo-1541888086925-0c770f6f698d?auto=format&fit=crop&q=80&w=600" alt="Construction" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-navy/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <span class="text-white font-medium text-sm">Construction</span>
                     </div>
                 </div>
-            </div>
-        </section>
-
-        <!-- Our Commitment & Managed By Section -->
-        <section id="commitment" class="py-20 lg:py-28 bg-brand-900 text-white relative overflow-hidden">
-            <!-- Decorative Backgrounds -->
-            <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-brand-800 rounded-full blur-3xl opacity-50 -translate-y-1/2 translate-x-1/3 pointer-events-none"></div>
-            
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
-                    <!-- Our Commitment -->
-                    <div class="space-y-8">
-                        <div>
-                            <h2 class="font-display text-3xl font-bold tracking-tight mb-2">Our Commitment</h2>
-                            <div class="w-12 h-1 bg-accent-500 rounded-full"></div>
-                        </div>
-                        
-                        <div class="space-y-6 text-brand-50/90 font-light leading-relaxed">
-                            <p>
-                                At Mother Care Women & Child Hospital, we are committed to providing a safe, respectful, and comfortable healthcare environment for women and children.
-                            </p>
-                            <p>
-                                Special attention will be given to maintaining privacy and dignity for women patients. Wherever possible, female healthcare professionals and support staff will be available to assist women during consultations, examinations, and treatment.
-                            </p>
-                            <p>
-                                Our goal is to maintain affordable treatment costs while ensuring high standards of medical care.
-                            </p>
-                            <div class="p-6 bg-brand-800/50 rounded-2xl border border-brand-700 mt-6">
-                                <p class="text-sm">
-                                    Support for financially vulnerable families may be facilitated through charitable initiatives undertaken by SQA Social Welfare Trust, subject to applicable policies and available resources.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="space-y-2 mt-8 border-l-4 border-accent-500 pl-6 py-2">
-                            <p class="font-display text-xl font-bold text-white">Every Mother Deserves Safe Care.</p>
-                            <p class="font-display text-xl font-bold text-accent-400">Every Child Deserves a Healthy Start.</p>
-                        </div>
-                    </div>
-
-                    <!-- Managed By -->
-                    <div class="space-y-8 lg:border-l lg:border-brand-800 lg:pl-16">
-                        <div>
-                            <h2 class="font-display text-3xl font-bold tracking-tight mb-2">Managed By</h2>
-                            <div class="w-12 h-1 bg-white rounded-full"></div>
-                        </div>
-                        
-                        <div class="bg-white text-gray-900 rounded-3xl p-8 shadow-xl mt-6">
-                            <h3 class="font-display text-2xl font-bold text-brand-700 mb-4">SQA Social Welfare Trust</h3>
-                            <p class="text-gray-600 mb-4 leading-relaxed font-light">
-                                SQA Social Welfare Trust is committed to supporting healthcare, education, social welfare, and community development initiatives.
-                            </p>
-                            <p class="text-gray-600 leading-relaxed font-light">
-                                The Trust works towards improving the lives of women, children, and underprivileged families through meaningful social impact programs.
-                            </p>
-                        </div>
+                <div class="group relative aspect-square rounded-2xl overflow-hidden bg-lightgray hover-lift">
+                    <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&q=80&w=600" alt="Meetings" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-navy/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <span class="text-white font-medium text-sm">Meetings</span>
                     </div>
                 </div>
-            </div>
-        </section>
-
-        <!-- Contact Us Section -->
-        <section id="contact" class="py-20 lg:py-28 bg-white">
-            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
-                    <h2 class="font-display text-3xl sm:text-4xl font-bold text-gray-900 tracking-tight">Contact Us</h2>
-                    <div class="w-12 h-1 bg-brand-600 mx-auto rounded-full mt-2"></div>
+                <div class="group relative aspect-square rounded-2xl overflow-hidden bg-lightgray hover-lift">
+                    <img src="https://images.unsplash.com/photo-1593113565214-0678fb8cb14c?auto=format&fit=crop&q=80&w=600" alt="Women Volunteers" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-navy/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <span class="text-white font-medium text-sm">Women Volunteers</span>
+                    </div>
                 </div>
-
-                <div class="bg-gray-50 border border-gray-100 rounded-3xl p-8 md:p-12">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-                        <div class="space-y-8">
-                            <div class="flex items-start gap-4">
-                                <div class="w-12 h-12 rounded-full bg-brand-100 flex items-center justify-center text-brand-600 shrink-0">
-                                    <i data-lucide="map-pin" class="w-5 h-5"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-display font-bold text-gray-900 mb-1">Address</h4>
-                                    <p class="text-gray-600 font-light text-sm leading-relaxed">Sahaswan, District Badaun,<br>Uttar Pradesh, India</p>
-                                </div>
-                            </div>
-                            
-                            <div class="flex items-start gap-4">
-                                <div class="w-12 h-12 rounded-full bg-brand-100 flex items-center justify-center text-brand-600 shrink-0">
-                                    <i data-lucide="phone" class="w-5 h-5"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-display font-bold text-gray-900 mb-1">Phone</h4>
-                                    <span class="inline-block px-3 py-1 bg-gray-200 text-gray-700 text-xs font-mono font-bold rounded-md">To Be Updated</span>
-                                </div>
-                            </div>
-
-                            <div class="flex items-start gap-4">
-                                <div class="w-12 h-12 rounded-full bg-brand-100 flex items-center justify-center text-brand-600 shrink-0">
-                                    <i data-lucide="mail" class="w-5 h-5"></i>
-                                </div>
-                                <div>
-                                    <h4 class="font-display font-bold text-gray-900 mb-1">Email</h4>
-                                    <span class="inline-block px-3 py-1 bg-gray-200 text-gray-700 text-xs font-mono font-bold rounded-md">To Be Updated</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div>
-                            <div class="h-full rounded-2xl bg-gray-200 flex flex-col items-center justify-center p-8 text-center min-h-[250px] border border-gray-300">
-                                <i data-lucide="map" class="w-8 h-8 text-gray-400 mb-3"></i>
-                                <span class="font-mono text-sm font-bold text-gray-500 uppercase tracking-widest mb-2">Google Map Location</span>
-                                <span class="inline-block px-4 py-1.5 bg-white text-gray-700 text-xs font-mono font-bold rounded-lg shadow-sm">To Be Updated</span>
-                            </div>
-                        </div>
+                <div class="group relative aspect-square rounded-2xl overflow-hidden bg-lightgray hover-lift">
+                    <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&q=80&w=600" alt="Medical Camps" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-navy/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <span class="text-white font-medium text-sm">Medical Camps</span>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-gray-900 py-12 border-t border-gray-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <div class="flex items-center justify-center gap-3 mb-6">
-                <div class="w-8 h-8 rounded-full bg-brand-600 flex items-center justify-center text-white">
-                    <i data-lucide="heart-handshake" class="w-4 h-4"></i>
+    <!-- 10. Footer -->
+    <footer class="bg-white border-t border-gray-200 py-16 fade-in-up">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-12 mb-16">
+                <!-- Brand -->
+                <div class="col-span-2 space-y-6">
+                    <div class="flex items-center gap-2">
+                        <i data-lucide="heart" class="w-5 h-5 text-teal"></i>
+                        <span class="font-medium text-lg tracking-tight text-navy">Mother Care</span>
+                    </div>
+                    <p class="text-sm text-muted leading-relaxed max-w-sm font-light">
+                        Building India's first women-only hospital operated entirely by women. Providing healthcare in an environment of comfort, dignity, and privacy.
+                    </p>
                 </div>
-                <span class="font-display font-bold text-lg tracking-tight text-white block leading-none">MOTHER CARE</span>
+
+                <!-- Extra Pages -->
+                <div>
+                    <h4 class="font-medium text-navy mb-6 text-sm">Organization</h4>
+                    <ul class="space-y-4 text-sm text-muted font-light">
+                        <li><a href="#" class="hover:text-teal transition-colors">Home</a></li>
+                        <li><a href="#" class="hover:text-teal transition-colors">About Trust</a></li>
+                        <li><a href="#" class="hover:text-teal transition-colors">Founder</a></li>
+                        <li><a href="#" class="hover:text-teal transition-colors">Vision & Mission</a></li>
+                        <li><a href="#" class="hover:text-teal transition-colors">Hospital Project</a></li>
+                        <li><a href="#" class="hover:text-teal transition-colors">Medical Services</a></li>
+                    </ul>
+                </div>
+
+                <!-- Get Involved -->
+                <div>
+                    <h4 class="font-medium text-navy mb-6 text-sm">Get Involved</h4>
+                    <ul class="space-y-4 text-sm text-muted font-light">
+                        <li><a href="#donate" class="hover:text-teal transition-colors">Donate</a></li>
+                        <li><a href="#volunteer" class="hover:text-teal transition-colors">Become Volunteer</a></li>
+                        <li><a href="#" class="hover:text-teal transition-colors">News & Events</a></li>
+                        <li><a href="#" class="hover:text-teal transition-colors">Transparency Reports</a></li>
+                        <li><a href="#" class="hover:text-teal transition-colors">Annual Reports</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact & Legal -->
+                <div>
+                    <h4 class="font-medium text-navy mb-6 text-sm">Contact</h4>
+                    <ul class="space-y-4 text-sm text-muted font-light">
+                        <li>Hospital Location<br/><span class="text-xs">(To be updated)</span></li>
+                        <li><a href="#" class="hover:text-teal transition-colors">contact@mothercare.org</a></li>
+                    </ul>
+                    <div class="mt-8 space-y-2 text-xs text-muted font-light">
+                        <p>Trust Registration: pending</p>
+                        <p>80G / 12A (if applicable)</p>
+                        <p><a href="#" class="hover:text-teal">CSR Information</a></p>
+                    </div>
+                </div>
             </div>
-            <p class="text-gray-400 text-sm font-light">
-                © 2026 Mother Care Women & Child Hospital. All rights reserved.
-            </p>
-            <p class="text-gray-500 text-xs mt-2 font-light">
-                Managed by SQA Social Welfare Trust.
-            </p>
+
+            <div class="pt-8 border-t border-gray-100 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted font-light">
+                <p>© 2026 Mother Care Trust. All rights reserved.</p>
+                <div class="flex gap-6">
+                    <a href="#" class="hover:text-navy transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-navy transition-colors">Terms of Service</a>
+                </div>
+            </div>
         </div>
     </footer>
 
-    <!-- Initialize Icons and Mobile Menu Scripts -->
+    <!-- Initialize Scripts -->
     <script>
         // Render lucide icons
         lucide.createIcons();
@@ -492,6 +477,26 @@
             link.addEventListener('click', () => {
                 menu.classList.add('hidden');
             });
+        });
+
+        // Scroll animations using IntersectionObserver
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in-up').forEach((el) => {
+            observer.observe(el);
         });
     </script>
 </body>
